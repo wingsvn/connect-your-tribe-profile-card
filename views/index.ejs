@@ -2,13 +2,38 @@
 
 <article>
   <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
+    <h1><%= data.name %> <%= data.surname %> </h1>
+    <p>Name</p>
   </header>
-
-  <p><%= data.name %></p>
-
-  <footer></footer>
+  <main>
+    <img src="/images/wingsanlee profile.jpg" width="400" height="400">
+    <div class="about">
+      <div>
+        <h2>Amsterdam</h2>
+        <p>location</p>
+      </div>
+      <div>
+        <h2>FDND</h2>
+        <p>student</p>
+      </div>
+      <div>
+        <h2>optician</h2>
+        <p>degree</p>
+      </div>
+      <div>
+        <h2>barista</h2>
+        <p>parttime</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <h2>ooo</h2>
+    <p>HTML</p>
+    <h2>ooo</h2>
+    <p>CSS</p>
+    <h2>ooo</h2>
+    <p>JS</p>
+  </footer>
 </article>
 
 <%- include('./partials/foot') %>

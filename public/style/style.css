@@ -1,0 +1,58 @@
+/* mijn naam in H1 voor een groter lettertype, om te laten zien over wie dit visite kaartje overgaat.*/
+h1 {
+  font-size: 25px;
+  font-weight: 500 bold;
+  color: rgb(0, 0, 0);
+}
+
+/* ik wil de user aantrekken door roze te gebruiken, dit valt namelijk op. Je leest dus eerst de roze tekst en vervolgens het zwarte, bijv. eerst Naam en dan vervolgens Wing-San Lee*/
+p {
+  font-size: 15px;
+  font-weight: 500 bold;
+  color: rgb(255, 79, 226);
+}
+
+/* kleur zwart: beter contrast aangezien mijn  achtergrond wit is.*/
+h2 {
+  font-size: 20px;
+  font-weight: 500 bold;
+  color: rgb(0, 0, 0);
+}
+
+article {
+  border: 1em solid rgb(0, 0, 0);
+  padding: 2em;
+  border-radius: 4em;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  gap: 2em;
+}
+
+img {
+  width: 20em;
+  border-radius: 10px;
+  height: 500px;
+  border: 5px solid #000000;
+  margin-top: 50px; 
+  margin-left: 50px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+}
+
+.outro {
+  font-size: 15px;
+  font-weight: 500 bold;
+  color: rgb(0, 0, 0);
+}
+
+
