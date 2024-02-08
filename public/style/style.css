@@ -1,90 +1,137 @@
+
+@font-face {
+  font-family: american typewriter;
+  src: url(/public/fonts/AmericanTypewriterRegular.ttf);
+}
+
+@font-face {
+  font-family: typewriter light;
+  src: url(/public/fonts/AmericanTypewriterLight.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --body-color: #000;
   --text-color: #fff;
   --accent-color: #ff1493;
 }
 
-article {
-  width: 30rem;
-  height: 20rem;
-  background-color: var(--body-color);
-  border-radius: 1rem;
-}
-
-header {
-  height: 4rem;
-}
-
-h1 {
+body {
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-family: american typewriter;
   color: var(--text-color);
-  font-family: ;
   font-size: 1rem;
 }
 
-header p {
-  color: var(--accent-color);
+.container {
+  width: 25rem;
+  height: 16rem;
+  background-color: transparent;
 }
 
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative; /* to stack the front and back on top of each other */
+  transition: transform 5s; /* tijd van de transformatie */
+  transform-style: preserve-3d; /* om de 3D te behouden tijdens het transformeren*/
+} 
 
-
-
-/* 
-h1 {
-  font-size: 25px;
-  font-weight: 500 bold;
-  color: rgb(0, 0, 0);
+/* horizontal flip of .card when you move the mouse over the container */
+.container:hover .card {
+  transform: rotateY(180deg); /*horizontale draai van element */
 }
 
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-color);
+  border-radius: 1rem;
+  position: absolute; /* kaarten op elkaar door ze uit de flow te halen */
+  backface-visibility: hidden; /* de zichtbaarheid van de achterkant van de kaarten verbergen */
+} 
+
+
+.card-front header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-left: 12rem; */
+}
+
+.card-front header h1 {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin: unset; /* om de ruimte tussen h1 en p te verwijderen */
+  margin-top: 1rem;
+}
 
 p {
-  font-size: 15px;
-  font-weight: 500 bold;
-  color: rgb(255, 79, 226);
+  color: var(--accent-color);
+  margin: unset; /* margin verwijderen */
+}
+
+.card-front main {
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+}
+
+main img {
+  width: 4rem;
+  height: 5rem;
+}
+
+main h2 {
+  font-size: 1rem;
+  margin: unset;
 }
 
 
-h2 {
-  font-size: 20px;
-  font-weight: 500 bold;
-  color: rgb(0, 0, 0);
+article p {
+  padding: 1rem;
+  color: var(--text-color);
 }
 
-article {
-  border: 1em solid rgb(0, 0, 0);
-  padding: 2em;
-  border-radius: 4em;
-}
-
-header {
-  text-align: center;
-}
-
-main {
+footer {
   display: flex;
-  gap: 2em;
+  justify-content: center;
+  
+}
+.flip-button {
+  width: 6rem;
+  height: 2rem;
+  border-radius: 2rem;
+  border: none;
+  font-family: american typewriter, serif;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  cursor: pointer;
 }
 
-img {
-  width: 20em;
-  border-radius: 10px;
-  height: 500px;
-  border: 5px solid #000000;
-  margin-top: 50px; 
-  margin-left: 50px;
+.card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg); /* het draaien van de achterkant van het kaartje*/
 }
 
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2em;
+.card-back h2 {
+  font-size: 1rem;
+  margin: unset;
+  margin-top: 1rem;
 }
 
-.outro {
-  font-size: 15px;
-  font-weight: 500 bold;
-  color: rgb(0, 0, 0);
-} */
+
+/* youtube tutorial - flipcard: https://www.youtube.com/watch?v=NCLdf661ILE */
 
 
