@@ -50,7 +50,6 @@ body {
   transform: rotateY(180deg); horizontale draai van element 
 } */
 
-
 /* horizontal flip of .card when you click with your mouse over the contact-button */
 .card:has(.flip-button:focus) {
   transform: rotateY(180deg);
